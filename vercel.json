@@ -7,12 +7,16 @@
       "config": {
         "distDir": "dist"
       }
+    },
+    {
+      "src": "backend/app.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "dest": "backend/app.py"
     },
     {
       "src": "/(.*)",
@@ -21,7 +25,7 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "VITE_API_URL": "https://artderos.github.io/UrbCiv/api"
+    "VITE_API_URL": "/api"
   },
   "headers": [
     {

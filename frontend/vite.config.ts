@@ -12,10 +12,8 @@ export default defineConfig({
   },
   base: process.env.NODE_ENV === 'production' ? '/UrbCiv/' : '/',
   server: {
-    port: 5173,
-    strictPort: false,
+    port: 3000,
     host: true,
-    open: true
   },
   build: {
     outDir: 'dist',
@@ -30,6 +28,6 @@ export default defineConfig({
     },
   },
   preview: {
-    port: 5173,
+    port: 3000,
   },
 }) 
